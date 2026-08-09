@@ -1,0 +1,21 @@
+{
+  "name": "lumina-production",
+  "version": "1.0.0",
+  "description": "芸能プロダクション「ルミナプロダクション」コーポレートサイト（仮想案件）",
+  "private": true,
+  "scripts": {
+    "build": "sass assets/scss/style.scss assets/css/style.css --style=compressed --no-source-map",
+    "watch": "sass --watch assets/scss/style.scss assets/css/style.css --no-source-map",
+    "serve": "npx --yes serve . -l 3000"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "devDependencies": {
+    "sass": "^1.80.0"
+  },
+  "author": "okawa",
+  "license": "UNLICENSED"
+}

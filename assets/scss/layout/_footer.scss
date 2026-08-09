@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  Footer
+// =========================
+
+.footer {
+  background-color: f.$color-bg-subtle;
+  padding-block: 3rem 2rem;
+}
+
+.footer__inner {
+  display: grid;
+  gap: 2.5rem;
+
+  @include f.mq(lg) {
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: start;
+  }
+}
+
+// ---- サイトマップ ----
+.footer__sitemap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1.5rem;
+  order: 2;
+
+  @include f.mq(lg) {
+    order: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem 2rem;
+  }
+}
+
+.footer__sitemap-link {
+  font-size: 13px;
+  line-height: 1.6;
+
+  &::before {
+    content: "―";
+    margin-right: 0.5rem;
+    color: f.$color-gold;
+  }
+}
+
+.footer__aside {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+
+  @include f.mq(lg) {
+    justify-items: end;
+  }
+}
+
+// ---- SNS ----
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  grid-template-rows: repeat(2, 40px);
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  background-color: f.$color-white;
+  border: 1px solid f.$color-border;
+  border-radius: 4px;
+  font-size: 13px;
+  transition: border-color f.$duration-fast f.$ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 1;
+      border-color: f.$color-navy;
+    }
+  }
+}
+
+.footer__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.footer__icon--youtube {
+  width: 72px;
+  height: auto;
+}
+
+// ---- 会社情報 ----
+.footer__info {
+  text-align: center;
+
+  @include f.mq(lg) {
+    text-align: right;
+  }
+}
+
+.footer__company {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 0.75rem;
+}
+
+.footer__detail {
+  font-size: 12px;
+  line-height: 2;
+  color: f.$color-text-muted;
+}
+
+.footer__copyright {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid f.$color-border;
+  font-size: 12px;
+  text-align: center;
+  color: f.$color-text-muted;
+
+  @include f.mq(lg) {
+    margin-top: 3rem;
+  }
+}
+
+// ---- ページトップへ戻る ----
+.to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: grid;
+  place-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: f.$color-navy;
+  color: f.$color-white;
+  box-shadow: f.$shadow-md;
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 8px;
+  transition: opacity f.$duration-base f.$ease-out,
+    visibility f.$duration-base f.$ease-out,
+    translate f.$duration-base f.$ease-out;
+  @include f.z("sticky");
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    translate: 0 0;
+  }
+
+  @include f.mq(lg) {
+    right: 32px;
+    bottom: 32px;
+  }
+}

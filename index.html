@@ -2,140 +2,1145 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ルミナプロダクション</title>
-    <meta name="description" content="芸能プロダクションのスタッフ紹介ページ">
-    <link rel="stylesheet" href="assets/css/style.css"/>
-    <script src="assets/js/script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ルミナプロダクション｜タレント・声優・アーティストのマネジメント</title>
+    <meta
+      name="description"
+      content="ルミナプロダクションは、タレント・声優・アーティスト・キャスターのマネジメントを行う芸能プロダクションです。所属タレント紹介、キャスティングのご相談、オーディション情報はこちらから。"
+    />
+    <link rel="canonical" href="https://okawa0.github.io/lumina-production/" />
+
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ルミナプロダクション" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta
+      property="og:title"
+      content="ルミナプロダクション｜タレント・声優・アーティストのマネジメント"
+    />
+    <meta
+      property="og:description"
+      content="才能が、輝きはじめる場所。タレント・声優・アーティスト・キャスターのマネジメントを行う芸能プロダクションです。"
+    />
+    <meta property="og:url" content="https://okawa0.github.io/lumina-production/" />
+    <meta
+      property="og:image"
+      content="https://okawa0.github.io/lumina-production/assets/images/ogp.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- JS が有効なときだけスクロール表示アニメーションを適用するための目印 -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module" src="assets/js/main.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ルミナプロダクション",
+        "alternateName": "LUMINA PRODUCTION",
+        "url": "https://okawa0.github.io/lumina-production/",
+        "logo": "https://okawa0.github.io/lumina-production/assets/images/logo.webp",
+        "description": "タレント・声優・アーティスト・キャスターのマネジメントを行う芸能プロダクション。",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "JP",
+          "addressRegion": "東京都",
+          "addressLocality": "渋谷区",
+          "streetAddress": "渋谷3丁目12-8 渋谷フロンティアビル 5F",
+          "postalCode": "150-0002"
+        },
+        "telephone": "+81-3-6400-1234",
+        "faxNumber": "+81-3-6400-1235"
+      }
+    </script>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="header__top">
-            <a href="index.html"><img src="assets/images/logo.webp" alt="テラノプロダクション ロゴ" class="header__logo"/></a>
-            <nav aria-label="パンくずリスト" class="breadcrumb">
-              <ol class="breadcrumb__list">
-                <li><a href="index.html" class="breadcrumb__list-link">HOME</a></li>
-                <li>スタッフ紹介</li>
-              </ol>
-            </nav>
-          </div>
-          <a href="index.html"><span class="header__title">スタッフ紹介</span></a>
-        </div>
+    <a class="skip-link" href="#main">本文へスキップ</a>
+
+    <header class="header" data-header>
+      <div class="container--wide header__inner">
+        <a
+          href="index.html"
+          class="header__brand"
+          aria-label="ルミナプロダクション ホーム"
+        >
+          <img
+            src="assets/images/logo.webp"
+            alt="ルミナプロダクション"
+            width="536"
+            height="226"
+            fetchpriority="high"
+          />
+        </a>
+
+        <nav class="nav" id="global-nav" data-drawer aria-label="メインナビゲーション">
+          <ul class="nav__list">
+            <li>
+              <a class="nav__link" href="index.html" aria-current="page"
+                >HOME<span class="nav__link-sub">ホーム</span></a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="#about"
+                >ABOUT<span class="nav__link-sub">私たちについて</span></a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="staff.html"
+                >TALENT<span class="nav__link-sub">所属タレント</span></a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="#business"
+                >BUSINESS<span class="nav__link-sub">事業内容</span></a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="#news"
+                >NEWS<span class="nav__link-sub">お知らせ</span></a
+              >
+            </li>
+            <li class="nav__item--cta">
+              <a class="nav__cta" href="#contact">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          type="button"
+          class="drawer-toggle"
+          data-drawer-toggle
+          aria-expanded="false"
+          aria-controls="global-nav"
+          aria-label="メニューを開く"
+        >
+          <span class="drawer-toggle__bar"></span>
+          <span class="drawer-toggle__bar"></span>
+          <span class="drawer-toggle__bar"></span>
+        </button>
       </div>
     </header>
-    <main class="main--top">
-      <div class="hero">
-        <img src="assets/images/hero--sp.webp" alt="" class="hero-image--sp">
-        <img src="assets/images/hero.webp" alt="" class="hero-image--pc">
-      </div>
-      <div class="container content">
-        <div class="staff-list">
-          <div class="staff-card">
-            <a href="detail.html"><img src="assets/images/staff-1.webp" alt="スタッフ写真" class="staff-card__image"/></a>
-            <div class="staff-card__content">
-              <span class="card__budge"><img src="assets/images/new.svg" alt="new"></span>
-              <a href="detail.html">
-                <h2 class="card__title">望月 彩花（タレント）</h2>
+    <div class="drawer-overlay" data-drawer-overlay></div>
+
+    <main id="main">
+      <!-- ===== Hero ===== -->
+      <section class="hero">
+        <div class="hero__media" aria-hidden="true">
+          <div class="hero__mosaic">
+            <img
+              src="assets/images/staff-1.webp"
+              alt=""
+              class="hero__tile"
+              width="341"
+              height="341"
+              decoding="async"
+              style="--i: 0"
+            />
+            <img
+              src="assets/images/staff-4.webp"
+              alt=""
+              class="hero__tile"
+              width="341"
+              height="341"
+              decoding="async"
+              style="--i: 1"
+            />
+            <img
+              src="assets/images/staff-7.webp"
+              alt=""
+              class="hero__tile"
+              width="341"
+              height="341"
+              decoding="async"
+              style="--i: 2"
+            />
+            <img
+              src="assets/images/staff-2.webp"
+              alt=""
+              class="hero__tile"
+              width="341"
+              height="341"
+              decoding="async"
+              style="--i: 3"
+            />
+            <img
+              src="assets/images/staff-5.webp"
+              alt=""
+              class="hero__tile"
+              width="341"
+              height="341"
+              decoding="async"
+              style="--i: 4"
+            />
+            <img
+              src="assets/images/staff-8.webp"
+              alt=""
+              class="hero__tile"
+              width="341"
+              height="341"
+              decoding="async"
+              style="--i: 5"
+            />
+            <img
+              src="assets/images/staff-3.webp"
+              alt=""
+              class="hero__tile"
+              width="341"
+              height="341"
+              decoding="async"
+              style="--i: 6"
+            />
+            <img
+              src="assets/images/staff-6.webp"
+              alt=""
+              class="hero__tile"
+              width="341"
+              height="341"
+              decoding="async"
+              style="--i: 7"
+            />
+            <img
+              src="assets/images/staff-9.webp"
+              alt=""
+              class="hero__tile"
+              width="341"
+              height="341"
+              decoding="async"
+              style="--i: 8"
+            />
+            <img
+              src="assets/images/staff-2.webp"
+              alt=""
+              class="hero__tile"
+              width="341"
+              height="341"
+              decoding="async"
+              style="--i: 9"
+            />
+            <img
+              src="assets/images/staff-6.webp"
+              alt=""
+              class="hero__tile"
+              width="341"
+              height="341"
+              decoding="async"
+              style="--i: 10"
+            />
+            <img
+              src="assets/images/staff-4.webp"
+              alt=""
+              class="hero__tile"
+              width="341"
+              height="341"
+              decoding="async"
+              style="--i: 11"
+            />
+          </div>
+          <div class="hero__overlay"></div>
+        </div>
+
+        <div class="container hero__inner">
+          <p class="hero__label">LUMINA PRODUCTION</p>
+          <h1 class="hero__title">才能が、<br />輝きはじめる場所。</h1>
+          <p class="hero__text">
+            テレビ・映画・舞台・アニメ・音楽・報道。<br />
+            ジャンルの垣根を越えて活躍する表現者を、<br />
+            マネジメントから育成まで一貫して支えています。
+          </p>
+          <div class="hero__actions">
+            <a href="staff.html" class="btn btn--gold">
+              所属タレントを見る
+              <img
+                src="assets/images/arrow.svg"
+                alt=""
+                class="btn__arrow"
+                width="26"
+                height="6"
+              />
+            </a>
+            <a href="#audition" class="btn btn--outline">オーディション情報</a>
+          </div>
+        </div>
+
+        <a href="#news" class="hero__scroll" aria-label="お知らせへスクロール">SCROLL</a>
+      </section>
+
+      <!-- ===== News ===== -->
+      <section id="news" class="section">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <span class="section__label">NEWS</span>
+            <h2 class="section__title">お知らせ</h2>
+          </div>
+
+          <ul class="news-list" data-reveal>
+            <li class="news-item">
+              <a href="#" class="news-item__link">
+                <span class="news-item__meta">
+                  <time class="news-item__date" datetime="2026-08-01">2026.08.01</time>
+                  <span class="news-item__category">オーディション</span>
+                </span>
+                <span class="news-item__title"
+                  >2026年度 第2期 新人発掘オーディションの募集を開始しました</span
+                >
               </a>
-              <time datetime="2025-07-01" class="card__time">2025年7月1日（火）</time>
-              <p class="card__text">バラエティの現場では自然体でいることを一番大切にしていて、作り込まれた自分よりも、ふとした瞬間に出る素の表情を見てもらえたらと思っていますし...</p>
-              <a href="detail.html" class="card__link">続きを読む<img src="assets/images/arrow.svg" alt="矢印"></a>
+            </li>
+            <li class="news-item">
+              <a href="#" class="news-item__link">
+                <span class="news-item__meta">
+                  <time class="news-item__date" datetime="2026-07-18">2026.07.18</time>
+                  <span class="news-item__category news-item__category--media">メディア</span>
+                </span>
+                <span class="news-item__title"
+                  >望月 彩花が木曜ドラマ『境界線の向こう側』にレギュラー出演します</span
+                >
+              </a>
+            </li>
+            <li class="news-item">
+              <a href="#" class="news-item__link">
+                <span class="news-item__meta">
+                  <time class="news-item__date" datetime="2026-06-30">2026.06.30</time>
+                  <span class="news-item__category news-item__category--media">メディア</span>
+                </span>
+                <span class="news-item__title"
+                  >桐谷 颯真のニューシングル「Prism」が配信リリースされました</span
+                >
+              </a>
+            </li>
+            <li class="news-item">
+              <a href="#" class="news-item__link">
+                <span class="news-item__meta">
+                  <time class="news-item__date" datetime="2026-06-12">2026.06.12</time>
+                  <span class="news-item__category">お知らせ</span>
+                </span>
+                <span class="news-item__title"
+                  >公式ファンクラブ 新規入会キャンペーンを実施しています</span
+                >
+              </a>
+            </li>
+          </ul>
+
+          <div class="section__foot" data-reveal>
+            <a href="#" class="btn btn--navy">
+              お知らせ一覧を見る
+              <img
+                src="assets/images/arrow--white.svg"
+                alt=""
+                class="btn__arrow"
+                width="26"
+                height="6"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== About ===== -->
+      <section id="about" class="section section--tint">
+        <div class="container">
+          <div class="about__grid">
+            <div data-reveal>
+              <div class="section__head">
+                <span class="section__label">ABOUT US</span>
+                <h2 class="section__title">才能を、長く輝かせるために。</h2>
+              </div>
+              <p class="about__text">
+                ルミナプロダクションは、2005年の創業以来、タレント・声優・アーティスト・キャスターのマネジメントを行ってきました。
+                一人ひとりの個性を見極め、出演の機会をつくるだけでなく、表現者としてのキャリアを長い時間軸で設計することを大切にしています。
+              </p>
+              <p class="about__text">
+                所属タレントの活動領域は、テレビ・映画・舞台・アニメ・音楽・報道と多岐にわたります。
+                現場で培った知見を社内で共有し、次の世代の育成にもつなげていく。その循環こそが、私たちの強みです。
+              </p>
+            </div>
+
+            <figure class="about__figure" data-reveal>
+              <img
+                src="assets/images/article-image.webp"
+                alt="スタジオでインタビューを受ける所属タレント"
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
+
+          <!-- 見た目は数値が上・ラベルが下だが、dl の仕様に沿って dt → dd の順で記述し、
+               表示順は CSS（column-reverse）で入れ替えている -->
+          <dl class="stats" data-reveal>
+            <div class="stats__item">
+              <dt class="stats__label">創業からの歩み</dt>
+              <dd class="stats__value">
+                <span data-count-to="21">21</span><span class="stats__unit">年</span>
+              </dd>
+            </div>
+            <div class="stats__item">
+              <dt class="stats__label">所属タレント数</dt>
+              <dd class="stats__value">
+                <span data-count-to="86">86</span><span class="stats__unit">名</span>
+              </dd>
+            </div>
+            <div class="stats__item">
+              <dt class="stats__label">年間出演実績</dt>
+              <dd class="stats__value">
+                <span data-count-to="1200">1200</span><span class="stats__unit">本</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ===== Talent ===== -->
+      <section id="talent" class="section">
+        <div class="container">
+          <div class="section__head section__head--center" data-reveal>
+            <span class="section__label">TALENT</span>
+            <h2 class="section__title">所属タレント</h2>
+            <p class="section__lead">
+              ジャンルの異なる表現者が、それぞれのフィールドで活躍しています。
+            </p>
+          </div>
+
+          <div class="slider" data-slider data-reveal>
+            <ul class="slider__viewport" data-slider-viewport>
+              <li class="slider__slide" data-slider-slide>
+                <a href="detail.html" class="talent-card">
+                  <div class="talent-card__figure">
+                    <img
+                      src="assets/images/staff-1.webp"
+                      alt="望月 彩花"
+                      class="talent-card__image"
+                      width="341"
+                      height="341"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="talent-card__body">
+                    <p class="talent-card__role">TALENT</p>
+                    <p class="talent-card__name">望月 彩花</p>
+                    <p class="talent-card__name-en">Ayaka Mochizuki</p>
+                  </div>
+                </a>
+              </li>
+              <li class="slider__slide" data-slider-slide>
+                <a href="detail.html" class="talent-card">
+                  <div class="talent-card__figure">
+                    <img
+                      src="assets/images/staff-2.webp"
+                      alt="朝倉 恒一"
+                      class="talent-card__image"
+                      width="341"
+                      height="341"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="talent-card__body">
+                    <p class="talent-card__role">TALENT</p>
+                    <p class="talent-card__name">朝倉 恒一</p>
+                    <p class="talent-card__name-en">Koichi Asakura</p>
+                  </div>
+                </a>
+              </li>
+              <li class="slider__slide" data-slider-slide>
+                <a href="detail.html" class="talent-card">
+                  <div class="talent-card__figure">
+                    <img
+                      src="assets/images/staff-3.webp"
+                      alt="神崎 優"
+                      class="talent-card__image"
+                      width="341"
+                      height="341"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="talent-card__body">
+                    <p class="talent-card__role">VOICE ACTOR</p>
+                    <p class="talent-card__name">神崎 優</p>
+                    <p class="talent-card__name-en">Yu Kanzaki</p>
+                  </div>
+                </a>
+              </li>
+              <li class="slider__slide" data-slider-slide>
+                <a href="detail.html" class="talent-card">
+                  <div class="talent-card__figure">
+                    <img
+                      src="assets/images/staff-4.webp"
+                      alt="桐谷 颯真"
+                      class="talent-card__image"
+                      width="341"
+                      height="341"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="talent-card__body">
+                    <p class="talent-card__role">ARTIST</p>
+                    <p class="talent-card__name">桐谷 颯真</p>
+                    <p class="talent-card__name-en">Soma Kiritani</p>
+                  </div>
+                </a>
+              </li>
+              <li class="slider__slide" data-slider-slide>
+                <a href="detail.html" class="talent-card">
+                  <div class="talent-card__figure">
+                    <img
+                      src="assets/images/staff-5.webp"
+                      alt="白石 みなみ"
+                      class="talent-card__image"
+                      width="341"
+                      height="341"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="talent-card__body">
+                    <p class="talent-card__role">CASTER</p>
+                    <p class="talent-card__name">白石 みなみ</p>
+                    <p class="talent-card__name-en">Minami Shiraishi</p>
+                  </div>
+                </a>
+              </li>
+              <li class="slider__slide" data-slider-slide>
+                <a href="detail.html" class="talent-card">
+                  <div class="talent-card__figure">
+                    <img
+                      src="assets/images/staff-6.webp"
+                      alt="西園寺 凛"
+                      class="talent-card__image"
+                      width="341"
+                      height="341"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="talent-card__body">
+                    <p class="talent-card__role">VOICE ACTOR</p>
+                    <p class="talent-card__name">西園寺 凛</p>
+                    <p class="talent-card__name-en">Rin Saionji</p>
+                  </div>
+                </a>
+              </li>
+              <li class="slider__slide" data-slider-slide>
+                <a href="detail.html" class="talent-card">
+                  <div class="talent-card__figure">
+                    <img
+                      src="assets/images/staff-7.webp"
+                      alt="橘 ひかり"
+                      class="talent-card__image"
+                      width="341"
+                      height="341"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="talent-card__body">
+                    <p class="talent-card__role">CASTER</p>
+                    <p class="talent-card__name">橘 ひかり</p>
+                    <p class="talent-card__name-en">Hikari Tachibana</p>
+                  </div>
+                </a>
+              </li>
+              <li class="slider__slide" data-slider-slide>
+                <a href="detail.html" class="talent-card">
+                  <div class="talent-card__figure">
+                    <img
+                      src="assets/images/staff-8.webp"
+                      alt="相馬 悠斗"
+                      class="talent-card__image"
+                      width="341"
+                      height="341"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="talent-card__body">
+                    <p class="talent-card__role">ARTIST</p>
+                    <p class="talent-card__name">相馬 悠斗</p>
+                    <p class="talent-card__name-en">Yuto Soma</p>
+                  </div>
+                </a>
+              </li>
+              <li class="slider__slide" data-slider-slide>
+                <a href="detail.html" class="talent-card">
+                  <div class="talent-card__figure">
+                    <img
+                      src="assets/images/staff-9.webp"
+                      alt="久我山 結衣"
+                      class="talent-card__image"
+                      width="341"
+                      height="341"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="talent-card__body">
+                    <p class="talent-card__role">TALENT</p>
+                    <p class="talent-card__name">久我山 結衣</p>
+                    <p class="talent-card__name-en">Yui Kugayama</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+
+            <!-- ボタンは JS が有効なときだけ意味を持つので、初期状態では隠しておく -->
+            <div class="slider__controls" data-slider-controls hidden>
+              <button
+                type="button"
+                class="slider__btn"
+                data-slider-prev
+                aria-label="前のタレントを表示"
+              >
+                <img src="assets/images/arrow-prev.svg" alt="" width="15" height="6" />
+              </button>
+              <button
+                type="button"
+                class="slider__btn"
+                data-slider-next
+                aria-label="次のタレントを表示"
+              >
+                <img src="assets/images/arrow-next.svg" alt="" width="15" height="6" />
+              </button>
             </div>
           </div>
-          <div class="staff-card">
-            <a href="detail.html"><img src="assets/images/staff-2.webp" alt="スタッフ写真" class="staff-card__image"/></a>
-            <div class="staff-card__content">
-              <span class="card__budge"><img src="assets/images/new.svg" alt="new"></span>
-              <a href="detail.html">
-                <h2 class="card__title">朝倉 恒一（タレント）</h2>
-              </a>
-              <time datetime="2025-03-01" class="card__time">2025年3月1日（火）</time>
-              <p class="card__text">もともと人前に出るのは得意ではなかったのですが、ある番組をきっかけに自分を表現する楽しさを知り、そこから仕事への向き合い方が大きく変わっていった気がしていて...</p>
-              <a href="detail.html" class="card__link">続きを読む<img src="assets/images/arrow.svg" alt="矢印"></a>
-            </div>
+
+          <div class="section__foot" data-reveal>
+            <a href="staff.html" class="btn btn--navy">
+              スタッフ紹介を見る
+              <img
+                src="assets/images/arrow--white.svg"
+                alt=""
+                class="btn__arrow"
+                width="26"
+                height="6"
+              />
+            </a>
           </div>
-          <div class="staff-card">
-            <a href="detail.html"><img src="assets/images/staff-3.webp" alt="スタッフ写真" class="staff-card__image"/></a>
-            <div class="staff-card__content">
-              <a href="detail.html">
-                <h2 class="card__title">神崎 優（声優）</h2>
-              </a>
-              <time datetime="2024-03-01" class="card__time">2024年3月1日（火）</time>
-              <p class="card__text">声優という仕事は声だけで感情や背景を伝える必要があるので、台本を読む前に必ずキャラクターの人生を想像するようにしていて、その過程がとても大事だと感じていますが...</p>
-              <a href="detail.html" class="card__link">続きを読む<img src="assets/images/arrow.svg" alt="矢印"></a>
-            </div>
+        </div>
+      </section>
+
+      <!-- ===== Business ===== -->
+      <section id="business" class="section section--tint">
+        <div class="container">
+          <div class="section__head section__head--center" data-reveal>
+            <span class="section__label">BUSINESS</span>
+            <h2 class="section__title">事業内容</h2>
           </div>
-          <div class="staff-card">
-            <a href="detail.html"><img src="assets/images/staff-4.webp" alt="スタッフ写真" class="staff-card__image"/></a>
-            <div class="staff-card__content">
-              <a href="detail.html">
-                <h2 class="card__title">桐谷 颯真（アーティスト）</h2>
-              </a>
-              <time datetime="2022-03-01" class="card__time">2022年3月1日（火）</time>
-              <p class="card__text">音楽を始めたきっかけは、子どもの頃に聴いた一曲で、今でもあの瞬間の衝撃は忘れられず、当時の自分にとっては世界が一気に広がった感覚があって...</p>
-              <a href="detail.html" class="card__link">続きを読む<img src="assets/images/arrow.svg" alt="矢印"></a>
-            </div>
+
+          <div class="business-list" data-reveal-stagger>
+            <article class="business-card" data-reveal>
+              <div class="business-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2.5 14.4 8l5.6.5-4.3 3.9 1.3 5.6L12 15.1 6.9 18l1.3-5.6L4 8.5 9.6 8z" />
+                </svg>
+              </div>
+              <h3 class="business-card__title">マネジメント</h3>
+              <p class="business-card__title-en">MANAGEMENT</p>
+              <p class="business-card__text">
+                所属タレントのスケジュール管理から出演交渉、キャリア設計までを一貫して担当します。現場に寄り添い、長期的な活動を支えます。
+              </p>
+            </article>
+
+            <article class="business-card" data-reveal>
+              <div class="business-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3.5 9.5h3l7-4.5v14l-7-4.5h-3z" />
+                  <path d="M17.5 8.5a5 5 0 0 1 0 7" />
+                  <path d="M6.5 15v3.5" />
+                </svg>
+              </div>
+              <h3 class="business-card__title">キャスティング</h3>
+              <p class="business-card__title-en">CASTING</p>
+              <p class="business-card__text">
+                番組・広告・映像作品の企画意図をうかがい、最適な人材をご提案します。所属外のネットワークも含めた提案が可能です。
+              </p>
+            </article>
+
+            <article class="business-card" data-reveal>
+              <div class="business-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 4 21 8.5 12 13 3 8.5z" />
+                  <path d="M6.5 10.8v4.4c0 1.6 2.5 2.9 5.5 2.9s5.5-1.3 5.5-2.9v-4.4" />
+                </svg>
+              </div>
+              <h3 class="business-card__title">スクール・育成</h3>
+              <p class="business-card__title-en">SCHOOL</p>
+              <p class="business-card__text">
+                演技・ボイストレーニング・話し方の各講座を運営。現役スタッフによる指導で、デビューまでを実践的にサポートします。
+              </p>
+            </article>
           </div>
-          <div class="staff-card">
-            <a href="detail.html"><img src="assets/images/staff-5.webp" alt="スタッフ写真" class="staff-card__image"/></a>
-            <div class="staff-card__content">
-              <a href="detail.html">
-                <h2 class="card__title">白石 みなみ（キャスター）</h2>
-              </a>
-              <time datetime="2022-03-01" class="card__time">2022年3月1日（火）</time>
-              <p class="card__text">キャスターとしてニュースを伝える際には、正確さはもちろんですが、その情報が誰の生活にどう影響するのかを常に考えるようにしており、言葉の選び方一つで印象が変わるため...</p>
-              <a href="detail.html" class="card__link">続きを読む<img src="assets/images/arrow.svg" alt="矢印"></a>
-            </div>
+        </div>
+      </section>
+
+      <!-- ===== Audition (CTA) ===== -->
+      <section id="audition" class="audition">
+        <div class="container" data-reveal>
+          <p class="audition__label">AUDITION</p>
+          <h2 class="audition__title">
+            次に輝くのは、<br />あなたかもしれない。
+          </h2>
+          <p class="audition__text">
+            ルミナプロダクションでは、年齢・経験を問わず新しい才能を募集しています。
+            現在は2026年度 第2期の書類選考を受付中です。
+          </p>
+          <div class="audition__actions">
+            <a href="#contact" class="btn btn--gold">
+              オーディションに応募する
+              <img
+                src="assets/images/arrow.svg"
+                alt=""
+                class="btn__arrow"
+                width="26"
+                height="6"
+              />
+            </a>
           </div>
-          <div class="staff-card">
-            <a href="detail.html"><img src="assets/images/staff-6.webp" alt="スタッフ写真" class="staff-card__image"/></a>
-            <div class="staff-card__content">
-              <a href="detail.html">
-                <h2 class="card__title">西園寺 凛（声優）</h2>
-              </a>
-              <time datetime="2022-03-01" class="card__time">2022年3月1日（火）</time>
-              <p class="card__text">アニメやゲームのキャラクターを演じる中で、自分自身の感情と役の感情が重なる瞬間があり、そのときに初めて「声だけでも人は心を動かせる」と実感できた経験が今の原動力になっていて...</p>
-              <a href="detail.html" class="card__link">続きを読む<img src="assets/images/arrow.svg" alt="矢印"></a>
+        </div>
+      </section>
+
+      <!-- ===== FAQ ===== -->
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section__head section__head--center" data-reveal>
+            <span class="section__label">FAQ</span>
+            <h2 class="section__title">よくあるご質問</h2>
+          </div>
+
+          <div class="accordion" data-accordion="single" data-reveal>
+            <div class="accordion__item">
+              <h3>
+                <button
+                  type="button"
+                  class="accordion__trigger"
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-panel-1"
+                  id="faq-trigger-1"
+                >
+                  <span class="accordion__mark">Q</span>
+                  <span class="accordion__label"
+                    >オーディションに年齢制限はありますか？</span
+                  >
+                  <span class="accordion__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="faq-panel-1"
+                role="region"
+                aria-labelledby="faq-trigger-1"
+              >
+                <div class="accordion__panel-inner">
+                  <div class="accordion__body">
+                    <span class="accordion__mark" aria-hidden="true">A</span>
+                    <p>
+                      年齢制限は設けておりません。未成年の方は保護者の同意書をあわせてご提出ください。経験の有無も問いませんので、まずはお気軽にご応募ください。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <h3>
+                <button
+                  type="button"
+                  class="accordion__trigger"
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-panel-2"
+                  id="faq-trigger-2"
+                >
+                  <span class="accordion__mark">Q</span>
+                  <span class="accordion__label">応募に費用はかかりますか？</span>
+                  <span class="accordion__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="faq-panel-2"
+                role="region"
+                aria-labelledby="faq-trigger-2"
+              >
+                <div class="accordion__panel-inner">
+                  <div class="accordion__body">
+                    <span class="accordion__mark" aria-hidden="true">A</span>
+                    <p>
+                      書類選考・面接ともに費用はいただいておりません。合格後のレッスン費用については、面談の際に個別にご説明いたします。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <h3>
+                <button
+                  type="button"
+                  class="accordion__trigger"
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-panel-3"
+                  id="faq-trigger-3"
+                >
+                  <span class="accordion__mark">Q</span>
+                  <span class="accordion__label"
+                    >タレントの出演依頼はどこから連絡すればよいですか？</span
+                  >
+                  <span class="accordion__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="faq-panel-3"
+                role="region"
+                aria-labelledby="faq-trigger-3"
+              >
+                <div class="accordion__panel-inner">
+                  <div class="accordion__body">
+                    <span class="accordion__mark" aria-hidden="true">A</span>
+                    <p>
+                      本ページ下部のお問い合わせフォーム、またはお電話にてご連絡ください。企画内容・媒体・スケジュールをお知らせいただけますと、ご提案がスムーズです。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <h3>
+                <button
+                  type="button"
+                  class="accordion__trigger"
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-panel-4"
+                  id="faq-trigger-4"
+                >
+                  <span class="accordion__mark">Q</span>
+                  <span class="accordion__label"
+                    >地方在住でもオーディションを受けられますか？</span
+                  >
+                  <span class="accordion__icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="faq-panel-4"
+                role="region"
+                aria-labelledby="faq-trigger-4"
+              >
+                <div class="accordion__panel-inner">
+                  <div class="accordion__body">
+                    <span class="accordion__mark" aria-hidden="true">A</span>
+                    <p>
+                      一次選考はオンラインで実施しているため、全国どこからでもご参加いただけます。最終選考のみ、東京本社での面接をお願いしております。
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="btn-wrapper"><a href="list.html" class="list-btn"><span class="list-button__text">スタッフ一覧を見る</span><img src="assets/images/arrow--white.svg" alt="矢印" class="list-button__arrow"></a></div>
-        <div class="banners">
-          <a href="#" class="banner"><img src="assets/images/banner.webp" alt=""></a>
-          <a href="#" class="banner"><img src="assets/images/banner-2.webp" alt=""></a>
-          <a href="#" class="banner"><img src="assets/images/banner-3.webp" alt=""></a>
-          <a href="#" class="banner"><img src="assets/images/banner-4.webp" alt=""></a>
-          <a href="#" class="banner"><img src="assets/images/banner-5.webp" alt=""></a>
-          <a href="#" class="banner"><img src="assets/images/banner-6.webp" alt=""></a>
+      </section>
+
+      <!-- ===== Contact ===== -->
+      <section id="contact" class="section section--tint">
+        <div class="container">
+          <div class="section__head section__head--center" data-reveal>
+            <span class="section__label">CONTACT</span>
+            <h2 class="section__title">お問い合わせ</h2>
+            <p class="section__lead">
+              出演依頼・オーディション・取材のご相談を承っております。<br />
+              2営業日以内に担当者よりご返信いたします。
+            </p>
+          </div>
+
+          <div data-reveal>
+            <form class="form" data-contact-form>
+              <div class="form__field">
+                <label class="form__label" for="contact-name">
+                  お名前<span class="form__required">必須</span>
+                </label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  class="form__control"
+                  autocomplete="name"
+                  placeholder="山田 太郎"
+                  required
+                  data-validate
+                  aria-describedby="contact-name-error"
+                />
+                <p class="form__error" id="contact-name-error" role="alert"></p>
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="contact-email">
+                  メールアドレス<span class="form__required">必須</span>
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  class="form__control"
+                  autocomplete="email"
+                  placeholder="example@lumina-production.jp"
+                  required
+                  data-validate
+                  aria-describedby="contact-email-error"
+                />
+                <p class="form__error" id="contact-email-error" role="alert"></p>
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="contact-type">
+                  お問い合わせ種別<span class="form__required">必須</span>
+                </label>
+                <select
+                  id="contact-type"
+                  name="type"
+                  class="form__control"
+                  required
+                  data-validate
+                  data-error-required="お問い合わせ種別を選択してください。"
+                  aria-describedby="contact-type-error"
+                >
+                  <option value="">選択してください</option>
+                  <option value="casting">出演・キャスティングのご依頼</option>
+                  <option value="audition">オーディションについて</option>
+                  <option value="press">取材・広報について</option>
+                  <option value="other">その他</option>
+                </select>
+                <p class="form__error" id="contact-type-error" role="alert"></p>
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="contact-message">
+                  お問い合わせ内容<span class="form__required">必須</span>
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="form__control"
+                  minlength="10"
+                  placeholder="ご相談内容をご記入ください。"
+                  required
+                  data-validate
+                  aria-describedby="contact-message-error"
+                ></textarea>
+                <p class="form__error" id="contact-message-error" role="alert"></p>
+              </div>
+
+              <div class="form__field">
+                <label class="form__privacy" for="contact-privacy">
+                  <input
+                    type="checkbox"
+                    id="contact-privacy"
+                    name="privacy"
+                    required
+                    data-validate
+                    data-error-required="プライバシーポリシーへの同意が必要です。"
+                    aria-describedby="contact-privacy-error"
+                  />
+                  <span><a href="#">プライバシーポリシー</a>に同意します</span>
+                </label>
+                <p class="form__error" id="contact-privacy-error" role="alert"></p>
+              </div>
+
+              <div class="form__actions">
+                <button type="submit" class="btn btn--navy">
+                  この内容で送信する
+                  <img
+                    src="assets/images/arrow--white.svg"
+                    alt=""
+                    class="btn__arrow"
+                    width="26"
+                    height="6"
+                  />
+                </button>
+                <p class="form__note">
+                  ※ 本サイトはフロントエンドのみの制作サンプルのため、実際の送信は行われません。
+                </p>
+              </div>
+            </form>
+
+            <div class="form__result" data-form-result tabindex="-1">
+              <strong>送信が完了しました。</strong>
+              <span
+                >お問い合わせありがとうございます。2営業日以内に担当者よりご返信いたします。</span
+              >
+            </div>
+          </div>
+
+          <div class="banners">
+            <a href="#" class="banner">
+              <img
+                src="assets/images/banner.webp"
+                alt="桐山 蓮 主演 木曜ドラマ『境界線の向こう側』特設サイト"
+                width="448"
+                height="190"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a href="#" class="banner">
+              <img
+                src="assets/images/banner-2.webp"
+                alt="ルミナプロダクション 公式オンラインストア"
+                width="448"
+                height="190"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a href="#" class="banner">
+              <img
+                src="assets/images/banner-3.webp"
+                alt="公式ファンクラブ 新規入会キャンペーン"
+                width="448"
+                height="190"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a href="#" class="banner">
+              <img
+                src="assets/images/banner-4.webp"
+                alt="ルミナアカデミー 受講生募集"
+                width="448"
+                height="190"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a href="#" class="banner">
+              <img
+                src="assets/images/banner-5.webp"
+                alt="ルミナプロダクション 公式YouTubeチャンネル"
+                width="448"
+                height="190"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a href="#" class="banner">
+              <img
+                src="assets/images/banner-6.webp"
+                alt="採用情報 スタッフ募集"
+                width="448"
+                height="190"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
-          <div class="footer__links">
-            <a href="#" class="footer__link">
-              <img src="assets/images/logo-instagram.webp" alt="Instagram" class="footer__icon">
-              Instagram
-            </a>
-            <a href="#" class="footer__link"><img src="assets/images/logo-x.webp" alt="X" class="footer__icon">X</a>
-            <a href="#" class="footer__link"><img src="assets/images/logo-facebook.webp" alt="Facebook" class="footer__icon">Facebook</a>
-            <a href="#" class="footer__link"><img src="assets/images/logo-youtube.webp" alt="YouTube" class="footer__icon--youtube"></a>
-          </div>
-          <div class="footer__info">
-            <p class="footer__company">ルミナプロダクション</p>
-            <p class="footer__detail">東京都渋谷区渋谷3丁目12-8
-</p>
-            <p class="footer__detail">渋谷フロンティアビル 5F</p>
-            <p class="footer__detail">TEL 03-6400-1234 FAX 03-6400-1235</p>
+          <nav class="footer__sitemap" aria-label="フッターナビゲーション">
+            <a href="index.html" class="footer__sitemap-link">ホーム</a>
+            <a href="#about" class="footer__sitemap-link">私たちについて</a>
+            <a href="staff.html" class="footer__sitemap-link">スタッフ紹介</a>
+            <a href="list.html" class="footer__sitemap-link">スタッフ一覧</a>
+            <a href="#business" class="footer__sitemap-link">事業内容</a>
+            <a href="#news" class="footer__sitemap-link">お知らせ</a>
+            <a href="#audition" class="footer__sitemap-link">オーディション</a>
+            <a href="#faq" class="footer__sitemap-link">よくあるご質問</a>
+            <a href="#contact" class="footer__sitemap-link">お問い合わせ</a>
+          </nav>
+
+          <div class="footer__aside">
+            <div class="footer__links">
+              <a href="#" class="footer__link">
+                <img
+                  src="assets/images/logo-instagram.webp"
+                  alt=""
+                  class="footer__icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />Instagram
+              </a>
+              <a href="#" class="footer__link">
+                <img
+                  src="assets/images/logo-x.webp"
+                  alt=""
+                  class="footer__icon"
+                  width="48"
+                  height="49"
+                  loading="lazy"
+                />X
+              </a>
+              <a href="#" class="footer__link">
+                <img
+                  src="assets/images/logo-facebook.webp"
+                  alt=""
+                  class="footer__icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />Facebook
+              </a>
+              <a href="#" class="footer__link" aria-label="YouTube">
+                <img
+                  src="assets/images/logo-youtube.webp"
+                  alt=""
+                  class="footer__icon--youtube"
+                  width="160"
+                  height="36"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <div class="footer__info">
+              <p class="footer__company">ルミナプロダクション</p>
+              <p class="footer__detail">
+                〒150-0002 東京都渋谷区渋谷3丁目12-8<br />渋谷フロンティアビル 5F
+              </p>
+              <p class="footer__detail">TEL 03-6400-1234 ／ FAX 03-6400-1235</p>
+            </div>
           </div>
         </div>
-        <div class="footer__copyright">
-          <p>Copyright lumina Production All rights reserved.</p>
-        </div>
+
+        <p class="footer__copyright">
+          &copy; 2026 LUMINA Production All rights reserved.
+        </p>
       </div>
     </footer>
+
+    <a href="#main" class="to-top" data-to-top aria-label="ページ上部へ戻る">
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </a>
   </body>
 </html>

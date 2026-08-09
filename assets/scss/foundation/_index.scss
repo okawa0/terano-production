@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+// 各パーシャルから `@use "../foundation" as f;` の 1 行で
+// 変数・ミックスインをまとめて参照できるようにする
+@forward "variables";
+@forward "mixins";

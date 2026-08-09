@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  スタッフ詳細ページ
+// =========================
+
+.detail__inner {
+  @include f.mq(lg) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 258px;
+    gap: 5rem;
+    margin-bottom: 5rem;
+  }
+}
+
+// ---- 記事上部のプロフィール ----
+.detail__profile {
+  margin-bottom: 2.5rem;
+}
+
+.detail__profile-image {
+  width: 200px;
+  aspect-ratio: 1;
+  margin-inline: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 10px solid f.$color-bg-tint;
+}
+
+.detail__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+// ---- SNS シェア ----
+.share {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.share__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: f.$color-text-muted;
+}
+
+.share__btn {
+  display: grid;
+  place-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid f.$color-border;
+  border-radius: 50%;
+  background-color: f.$color-white;
+  transition: border-color f.$duration-fast f.$ease-out,
+    background-color f.$duration-fast f.$ease-out;
+
+  img {
+    width: 15px;
+    height: auto;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: f.$color-navy;
+      background-color: f.$color-bg-subtle;
+    }
+  }
+}
+
+// ---- 記事本文 ----
+.article {
+  &:not(:first-of-type) {
+    margin-top: 3rem;
+  }
+}
+
+.article__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  padding-left: 0.9rem;
+  border-left: 4px solid f.$color-navy;
+  margin-bottom: 1.5rem;
+
+  @include f.mq(lg) {
+    margin-bottom: 2rem;
+  }
+}
+
+.article__img {
+  width: min(100%, 400px);
+  border-radius: 20px;
+  // 記事画像の保存を抑止する（案件要件）。右クリック抑止は JS 側で行う
+  user-select: none;
+  -webkit-user-drag: none;
+
+  @include f.mq(lg) {
+    width: 274px;
+  }
+}
+
+.article__img--right {
+  float: none;
+  margin: 1.5rem auto;
+
+  @include f.mq(lg) {
+    float: right;
+    margin: 0 0 2rem 2rem;
+  }
+}
+
+.article__img--left {
+  float: none;
+  margin: 1.5rem auto;
+
+  @include f.mq(lg) {
+    float: left;
+    margin: 0 2rem 2rem 0;
+  }
+}
+
+.article__text {
+  font-size: 13px;
+  line-height: 2;
+}
+
+// 続きがあることを示す三点リーダー
+.article__more::after {
+  content: "・\A・\A・";
+  white-space: pre;
+  display: block;
+  text-align: center;
+  line-height: 0.6;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-block: 3rem;
+}
+
+// 画像なしパターンでも余白が崩れないようにする
+.article--no-image {
+  .article__text {
+    margin-top: 0;
+  }
+}
+
+// ---- サイドバー ----
+.aside {
+  display: none;
+
+  @include f.mq(lg) {
+    display: block;
+  }
+}
+
+.aside__title {
+  margin-bottom: 1rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.aside__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-block: 1.2rem;
+  border-top: 1px dashed f.$color-border-dashed;
+
+  &:last-child {
+    border-bottom: 1px dashed f.$color-border-dashed;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 1;
+
+      .aside__name {
+        color: f.$color-navy;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    }
+  }
+}
+
+.aside__image {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid f.$color-bg-tint;
+}
+
+.aside__name {
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+  transition: color f.$duration-fast f.$ease-out;
+}
+
+.aside__date {
+  font-size: 11px;
+  color: f.$color-text-muted;
+}

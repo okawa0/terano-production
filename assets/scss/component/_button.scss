@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  Button
+// =========================
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  min-height: 52px;
+  padding: 0.8rem 2rem;
+  border-radius: 0.8rem;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  transition: background-color f.$duration-fast f.$ease-out,
+    color f.$duration-fast f.$ease-out,
+    border-color f.$duration-fast f.$ease-out,
+    translate f.$duration-fast f.$ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 1;
+      translate: 0 -2px;
+    }
+  }
+
+  // 矢印は装飾なので、色だけ currentColor に追従させる
+  .btn__arrow {
+    flex-shrink: 0;
+    width: 22px;
+    height: auto;
+  }
+}
+
+.btn--navy {
+  background-color: f.$color-navy;
+  color: f.$color-white;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: f.$color-navy-dark;
+    }
+  }
+}
+
+.btn--gold {
+  background-color: f.$color-gold;
+  color: f.$color-navy-dark;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: f.$color-gold-light;
+    }
+  }
+}
+
+.btn--outline {
+  border: 1px solid currentColor;
+  color: f.$color-white;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: f.$color-white;
+      color: f.$color-navy-dark;
+    }
+  }
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn-wrapper {
+  margin-top: 3rem;
+  text-align: center;
+
+  @include f.mq(lg) {
+    margin-top: 4rem;
+  }
+}
+
+.btn-wrapper--detail {
+  margin-bottom: 3rem;
+}

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  スタッフ紹介ページ
+// =========================
+
+// ページ上部のキービジュアル
+.page-hero__image {
+  width: 100%;
+  aspect-ratio: 1024 / 718;
+  object-fit: cover;
+
+  @include f.mq(md) {
+    aspect-ratio: 3424 / 1248;
+  }
+}

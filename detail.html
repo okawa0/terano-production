@@ -3,243 +3,542 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ルミナプロダクション</title>
-    <meta name="description" content="芸能プロダクションのスタッフ詳細ページ" />
+    <title>望月 彩花（タレント）インタビュー｜ルミナプロダクション</title>
+    <meta
+      name="description"
+      content="「自然体がいちばんの武器」ルミナプロダクション所属タレント・望月 彩花のインタビュー。バラエティの現場で大切にしていることを聞きました。"
+    />
+    <link
+      rel="canonical"
+      href="https://okawa0.github.io/lumina-production/detail.html"
+    />
+
+    <!-- OGP -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ルミナプロダクション" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:title" content="望月 彩花（タレント）インタビュー｜ルミナプロダクション" />
+    <meta
+      property="og:description"
+      content="「自然体がいちばんの武器」ルミナプロダクション所属タレント・望月 彩花のインタビュー。バラエティの現場で大切にしていることを聞きました。"
+    />
+    <meta
+      property="og:url"
+      content="https://okawa0.github.io/lumina-production/detail.html"
+    />
+    <meta
+      property="og:image"
+      content="https://okawa0.github.io/lumina-production/assets/images/ogp.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <!-- JS が有効なときだけスクロール表示アニメーションを適用するための目印 -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/script.js" defer></script>
+    <script type="module" src="assets/js/main.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "望月 彩花（タレント）インタビュー｜自然体がいちばんの武器",
+        "datePublished": "2025-07-01",
+        "image": "https://okawa0.github.io/lumina-production/assets/images/article-image.webp",
+        "author": { "@type": "Organization", "name": "ルミナプロダクション" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ルミナプロダクション",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://okawa0.github.io/lumina-production/assets/images/logo.webp"
+          }
+        },
+        "mainEntityOfPage": "https://okawa0.github.io/lumina-production/detail.html"
+      }
+    </script>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="header__top">
-            <a href="index.html"><img
-              src="assets/images/logo.webp"
-              alt="テラノプロダクション ロゴ"
-              class="header__logo"
-            /></a>
-            <nav aria-label="パンくずリスト" class="breadcrumb">
-              <ol class="breadcrumb__list">
-                <li><a href="index.html" class="breadcrumb__list-link">HOME</a></li>
-                <li>
-                  <a href="index.html" class="breadcrumb__list-link"
-                    >スタッフ紹介</a
-                  >
-                </li>
-                <li>名前が入ります（職種が入ります）</li>
-              </ol>
-            </nav>
-          </div>
-          <a href="index.html"><span class="header__title">スタッフ紹介</span></a>
-        </div>
+    <a class="skip-link" href="#main">本文へスキップ</a>
+
+    <header class="header" data-header>
+      <div class="container--wide header__inner">
+        <a
+          href="index.html"
+          class="header__brand"
+          aria-label="ルミナプロダクション ホーム"
+        >
+          <img
+            src="assets/images/logo.webp"
+            alt="ルミナプロダクション"
+            width="536"
+            height="226"
+            fetchpriority="high"
+          />
+        </a>
+
+        <nav class="nav" id="global-nav" data-drawer aria-label="メインナビゲーション">
+          <ul class="nav__list">
+            <li>
+              <a class="nav__link" href="index.html"
+                >HOME<span class="nav__link-sub">ホーム</span></a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="index.html#about"
+                >ABOUT<span class="nav__link-sub">私たちについて</span></a
+              >
+            </li>
+            <li>
+              <a class="nav__link is-current-section" href="staff.html"
+                >TALENT<span class="nav__link-sub">所属タレント</span></a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="index.html#business"
+                >BUSINESS<span class="nav__link-sub">事業内容</span></a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="index.html#news"
+                >NEWS<span class="nav__link-sub">お知らせ</span></a
+              >
+            </li>
+            <li class="nav__item--cta">
+              <a class="nav__cta" href="index.html#contact">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          type="button"
+          class="drawer-toggle"
+          data-drawer-toggle
+          aria-expanded="false"
+          aria-controls="global-nav"
+          aria-label="メニューを開く"
+        >
+          <span class="drawer-toggle__bar"></span>
+          <span class="drawer-toggle__bar"></span>
+          <span class="drawer-toggle__bar"></span>
+        </button>
       </div>
     </header>
-    <main class="main--detail">
-      <div class="container content content--detail">
-        <div class="content__inner">
-          <div class="content__main">
-            <div class="content__desc">
-              <h1 class="content__title content__title--detail">望月 彩花（タレント）</h1>
+    <div class="drawer-overlay" data-drawer-overlay></div>
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <div class="container">
+        <ol class="breadcrumb__list">
+          <li><a href="index.html" class="breadcrumb__link">ホーム</a></li>
+          <li><a href="staff.html" class="breadcrumb__link">スタッフ紹介</a></li>
+          <li><a href="list.html" class="breadcrumb__link">スタッフ一覧</a></li>
+          <li>
+            <span class="breadcrumb__current" aria-current="page"
+              >望月 彩花（タレント）</span
+            >
+          </li>
+        </ol>
+      </div>
+    </nav>
+
+    <main id="main">
+      <div class="container content" data-protect-images>
+        <div class="detail__inner">
+          <div>
+            <div class="content__head">
+              <h1 class="content__title">望月 彩花（タレント）</h1>
             </div>
-            <div class="staff-list staff-list--detail">
-              <div class="staff-card">
-                  <img
-                    src="assets/images/staff-1.webp"
-                    alt="スタッフ写真"
-                    class="staff-card__image"
-                  />
-                <div class="staff-card__content staff-card__content--detail">
-                  <time datetime="2025-07-01" class="card__time"
-                    >2025年7月1日（火）</time
+
+            <div class="detail__profile">
+              <img
+                src="assets/images/staff-1.webp"
+                alt="望月 彩花"
+                class="detail__profile-image"
+                width="341"
+                height="341"
+                fetchpriority="high"
+              />
+              <div class="detail__meta">
+                <time datetime="2025-07-01" class="card__time">2025年7月1日（火）</time>
+                <div class="share">
+                  <span class="share__label">SHARE</span>
+                  <button
+                    type="button"
+                    class="share__btn"
+                    data-share="x"
+                    aria-label="X でシェアする（新しいウィンドウで開きます）"
                   >
-                  <div class="share-btn-wrapper">
-                    <button onclick="shareTwitter()" class="share-btn"><img src="assets/images/logo-x.webp" alt=""></button>
-                    <button onclick="shareFacebook()" class="share-btn share-btn--facebook"><img src="assets/images/logo-facebook.webp" alt=""></button>
-                  </div>
+                    <img src="assets/images/logo-x.webp" alt="" width="48" height="49" />
+                  </button>
+                  <button
+                    type="button"
+                    class="share__btn"
+                    data-share="facebook"
+                    aria-label="Facebook でシェアする（新しいウィンドウで開きます）"
+                  >
+                    <img
+                      src="assets/images/logo-facebook.webp"
+                      alt=""
+                      width="48"
+                      height="48"
+                    />
+                  </button>
                 </div>
               </div>
             </div>
+
             <article class="article">
               <h2 class="article__title">自然体がいちばんの武器</h2>
-              <img src="assets/images/article-image.webp" alt="" class="article__img float-right" oncontextmenu="return false;">
-              <p class="article__text">バラエティの現場では自然体でいることを一番大切にしていて、作り込まれた自分よりも、ふとした瞬間に出る素の表情を見てもらえたらと思っていますし、無理に笑いを取りにいくよりも、その場の流れや共演者との空気感を大事にしたいと考えています。緊張する場面でも、自分をよく見せようと意識しすぎると、かえって不自然になってしまうことが多くて、そういう経験を重ねる中で「等身大でいること」が一番伝わるのだと感じるようになりました。現場ごとに求められる役割は違いますが、まずは自分自身が楽しむこと、その楽しさが画面越しに伝わるような存在になれたら嬉しいです。これからも一つ一つの出会いや経験を大切にしながら、長く愛されるタレントを目指していきたいと思っています。</p>
+              <img
+                src="assets/images/article-image.webp"
+                alt="インタビューに答える望月 彩花"
+                class="article__img article__img--right"
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="article__text">
+                バラエティの現場では自然体でいることを一番大切にしていて、作り込まれた自分よりも、ふとした瞬間に出る素の表情を見てもらえたらと思っていますし、無理に笑いを取りにいくよりも、その場の流れや共演者との空気感を大事にしたいと考えています。緊張する場面でも、自分をよく見せようと意識しすぎると、かえって不自然になってしまうことが多くて、そういう経験を重ねる中で「等身大でいること」が一番伝わるのだと感じるようになりました。現場ごとに求められる役割は違いますが、まずは自分自身が楽しむこと、その楽しさが画面越しに伝わるような存在になれたら嬉しいです。これからも一つ一つの出会いや経験を大切にしながら、長く愛されるタレントを目指していきたいと思っています。
+              </p>
             </article>
+
             <article class="article">
               <h2 class="article__title">専門性を身に付けて仕事の幅を広げる</h2>
-              <img src="assets/images/article-image2.webp" alt="" class="article__img float-left" oncontextmenu="return false;">
-              <p class="article__text">一つの分野でしっかりと専門性を身に付けることが、結果的に仕事の幅を広げることにつながると感じています。最初は何でも挑戦したいという気持ちが強かったのですが、経験を重ねる中で「この人に任せたい」と思ってもらえる強みが必要だと実感するようになりました。自分の得意分野を明確にし、知識やスキルを深めていくことで、そこから派生する新しい仕事や役割に出会える機会も増えていきます。専門性は自分を縛るものではなく、むしろ可能性を広げる土台だと思っていますし、今後も学び続けながら、自分ならではの価値を磨いていきたいと考えています。<br><br>その一方で、専門性に固執しすぎて視野が狭くならないよう意識することも大切で、周囲の意見や新しい分野にも柔軟に触れながら、次に挑戦したい方向性を少しずつ探していきたいと思っていて、最近は特に</p>
-<div class="vertical-dots" aria-hidden="true"></div>
+              <img
+                src="assets/images/article-image2.webp"
+                alt="収録現場での望月 彩花"
+                class="article__img article__img--left"
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="article__text article__more">
+                一つの分野でしっかりと専門性を身に付けることが、結果的に仕事の幅を広げることにつながると感じています。最初は何でも挑戦したいという気持ちが強かったのですが、経験を重ねる中で「この人に任せたい」と思ってもらえる強みが必要だと実感するようになりました。自分の得意分野を明確にし、知識やスキルを深めていくことで、そこから派生する新しい仕事や役割に出会える機会も増えていきます。専門性は自分を縛るものではなく、むしろ可能性を広げる土台だと思っていますし、今後も学び続けながら、自分ならではの価値を磨いていきたいと考えています。<br /><br />その一方で、専門性に固執しすぎて視野が狭くならないよう意識することも大切で、周囲の意見や新しい分野にも柔軟に触れながら、次に挑戦したい方向性を少しずつ探していきたいと思っていて、最近は特に
+              </p>
             </article>
-            <div class="btn-wrapper btn-wrapper--detail"><a href="list.html" class="list-btn"><span class="list-button__text">スタッフ一覧へ戻る</span><img src="assets/images/arrow--white.svg" alt="矢印" class="list-button__arrow"></a></div>
+
+            <div class="btn-wrapper btn-wrapper--detail">
+              <a href="list.html" class="btn btn--navy">
+                スタッフ一覧へ戻る
+                <img
+                  src="assets/images/arrow--white.svg"
+                  alt=""
+                  class="btn__arrow"
+                  width="26"
+                  height="6"
+                />
+              </a>
+            </div>
           </div>
-          <div class="aside__wrapper">
-            <aside class="aside--interview">
-              <h3 class="aside__title">インタビュー</h3>
-              <a href="#" class="staff-box">
+
+          <aside class="aside" aria-labelledby="aside-title">
+            <h2 class="aside__title" id="aside-title">インタビュー</h2>
+              <a href="detail.html" class="aside__item">
                 <img
                   src="assets/images/staff-2.webp"
-                  alt="スタッフ写真"
-                  class="staff-image"
+                  alt=""
+                  class="aside__image"
+                  width="341"
+                  height="341"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div class="staff-info">
-                  <span class="staff-name"
-                    >朝倉 恒一（タレント）</span
-                  >
-                  <time datetime="2025-03-01" class="staff-date"
-                    >2025年3月1日（火）</time
-                  >
-                </div>
+                <span>
+                  <span class="aside__name">朝倉 恒一（タレント）</span>
+                  <time datetime="2025-03-01" class="aside__date">2025年3月1日（土）</time>
+                </span>
               </a>
-              <a href="#" class="staff-box">
+
+              <a href="detail.html" class="aside__item">
                 <img
                   src="assets/images/staff-3.webp"
-                  alt="スタッフ写真"
-                  class="staff-image"
+                  alt=""
+                  class="aside__image"
+                  width="341"
+                  height="341"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div class="staff-info">
-                  <span class="staff-name"
-                    >神崎 優（声優）</span
-                  >
-                  <time datetime="2024-03-01" class="staff-date"
-                    >2024年3月1日（火）</time
-                  >
-                </div>
+                <span>
+                  <span class="aside__name">神崎 優（声優）</span>
+                  <time datetime="2024-03-01" class="aside__date">2024年3月1日（金）</time>
+                </span>
               </a>
-              <a href="#" class="staff-box">
+
+              <a href="detail.html" class="aside__item">
                 <img
                   src="assets/images/staff-4.webp"
-                  alt="スタッフ写真"
-                  class="staff-image"
+                  alt=""
+                  class="aside__image"
+                  width="341"
+                  height="341"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div class="staff-info">
-                  <span class="staff-name"
-                    >桐谷 颯真（アーティスト）</span
-                  >
-                  <time datetime="2022-03-01" class="staff-date"
-                    >2022年3月1日（火）</time
-                  >
-                </div>
+                <span>
+                  <span class="aside__name">桐谷 颯真（アーティスト）</span>
+                  <time datetime="2022-03-01" class="aside__date">2022年3月1日（火）</time>
+                </span>
               </a>
-              <a href="#" class="staff-box">
+
+              <a href="detail.html" class="aside__item">
                 <img
                   src="assets/images/staff-5.webp"
-                  alt="スタッフ写真"
-                  class="staff-image"
+                  alt=""
+                  class="aside__image"
+                  width="341"
+                  height="341"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div class="staff-info">
-                  <span class="staff-name"
-                    >白石 みなみ（キャスター）</span
-                  >
-                  <time datetime="2022-03-01" class="staff-date"
-                    >2022年3月1日（火）</time
-                  >
-                </div>
+                <span>
+                  <span class="aside__name">白石 みなみ（キャスター）</span>
+                  <time datetime="2022-03-01" class="aside__date">2022年3月1日（火）</time>
+                </span>
               </a>
-              <a href="#" class="staff-box">
+
+              <a href="detail.html" class="aside__item">
                 <img
                   src="assets/images/staff-6.webp"
-                  alt="スタッフ写真"
-                  class="staff-image"
+                  alt=""
+                  class="aside__image"
+                  width="341"
+                  height="341"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div class="staff-info">
-                  <span class="staff-name"
-                    >西園寺 凛（声優）</span
-                  >
-                  <time datetime="2022-03-01" class="staff-date"
-                    >2022年3月1日（火）</time
-                  >
-                </div>
+                <span>
+                  <span class="aside__name">西園寺 凛（声優）</span>
+                  <time datetime="2022-03-01" class="aside__date">2022年3月1日（火）</time>
+                </span>
               </a>
-              <a href="#" class="staff-box">
+
+              <a href="detail.html" class="aside__item">
                 <img
                   src="assets/images/staff-7.webp"
-                  alt="スタッフ写真"
-                  class="staff-image"
+                  alt=""
+                  class="aside__image"
+                  width="341"
+                  height="341"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div class="staff-info">
-                  <span class="staff-name"
-                    >橘 ひかり（キャスター）</span
-                  >
-                  <time datetime="2022-03-01" class="staff-date"
-                    >2022年3月1日（火）</time
-                  >
-                </div>
+                <span>
+                  <span class="aside__name">橘 ひかり（キャスター）</span>
+                  <time datetime="2022-03-01" class="aside__date">2022年3月1日（火）</time>
+                </span>
               </a>
-              <a href="#" class="staff-box">
+
+              <a href="detail.html" class="aside__item">
                 <img
                   src="assets/images/staff-8.webp"
-                  alt="スタッフ写真"
-                  class="staff-image"
+                  alt=""
+                  class="aside__image"
+                  width="341"
+                  height="341"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div class="staff-info">
-                  <span class="staff-name"
-                    >相馬 悠斗（アーティスト）</span
-                  >
-                  <time datetime="2022-03-01" class="staff-date"
-                    >2022年3月1日（火）</time
-                  >
-                </div>
+                <span>
+                  <span class="aside__name">相馬 悠斗（アーティスト）</span>
+                  <time datetime="2022-03-01" class="aside__date">2022年3月1日（火）</time>
+                </span>
               </a>
-              <a href="#" class="staff-box">
+
+              <a href="detail.html" class="aside__item">
                 <img
                   src="assets/images/staff-9.webp"
-                  alt="スタッフ写真"
-                  class="staff-image"
+                  alt=""
+                  class="aside__image"
+                  width="341"
+                  height="341"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div class="staff-info">
-                  <span class="staff-name"
-                    >久我山 結衣（タレント）</span
-                  >
-                  <time datetime="2022-03-01" class="staff-date"
-                    >2022年3月1日（火）</time
-                  >
-                </div>
+                <span>
+                  <span class="aside__name">久我山 結衣（タレント）</span>
+                  <time datetime="2022-03-01" class="aside__date">2022年3月1日（火）</time>
+                </span>
               </a>
-            </aside>
-          </div>
+          </aside>
         </div>
-        <div class="pagination-wrapper">
-          <a href="#" class="prev"
-            ><img src="assets/images/arrow-prev.svg" alt="矢印" />前へ</a
+
+        <nav class="pagination" aria-label="記事の切り替え">
+          <span
+            class="pagination__link pagination__link--disabled"
+            aria-disabled="true"
+            >前の記事はありません</span
           >
-          <a href="#" class="next"
-            >次へ<img src="assets/images/arrow-next.svg" alt="矢印"
+          <a href="detail.html" class="pagination__link"
+            >次の記事<img
+              src="assets/images/arrow-next.svg"
+              alt=""
+              width="15"
+              height="6"
           /></a>
-        </div>
+        </nav>
+
         <div class="banners">
-          <a href="#" class="banner"><img src="assets/images/banner.webp" alt=""></a>
-          <a href="#" class="banner"><img src="assets/images/banner-2.webp" alt=""></a>
-          <a href="#" class="banner"><img src="assets/images/banner-3.webp" alt=""></a>
-          <a href="#" class="banner"><img src="assets/images/banner-4.webp" alt=""></a>
-          <a href="#" class="banner"><img src="assets/images/banner-5.webp" alt=""></a>
-          <a href="#" class="banner"><img src="assets/images/banner-6.webp" alt=""></a>
+          <a href="#" class="banner">
+            <img
+              src="assets/images/banner.webp"
+              alt="桐山 蓮 主演 木曜ドラマ『境界線の向こう側』特設サイト"
+              width="448"
+              height="190"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="#" class="banner">
+            <img
+              src="assets/images/banner-2.webp"
+              alt="ルミナプロダクション 公式オンラインストア"
+              width="448"
+              height="190"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="#" class="banner">
+            <img
+              src="assets/images/banner-3.webp"
+              alt="公式ファンクラブ 新規入会キャンペーン"
+              width="448"
+              height="190"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="#" class="banner">
+            <img
+              src="assets/images/banner-4.webp"
+              alt="ルミナアカデミー 受講生募集"
+              width="448"
+              height="190"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="#" class="banner">
+            <img
+              src="assets/images/banner-5.webp"
+              alt="ルミナプロダクション 公式YouTubeチャンネル"
+              width="448"
+              height="190"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="#" class="banner">
+            <img
+              src="assets/images/banner-6.webp"
+              alt="採用情報 スタッフ募集"
+              width="448"
+              height="190"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
         </div>
       </div>
     </main>
+
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
-          <div class="footer__links">
-            <a href="#" class="footer__link">
-              <img src="assets/images/logo-instagram.webp" alt="Instagram" class="footer__icon">
-              Instagram
-            </a>
-            <a href="#" class="footer__link"><img src="assets/images/logo-x.webp" alt="X" class="footer__icon">X</a>
-            <a href="#" class="footer__link"><img src="assets/images/logo-facebook.webp" alt="Facebook" class="footer__icon">Facebook</a>
-            <a href="#" class="footer__link"><img src="assets/images/logo-youtube.webp" alt="YouTube" class="footer__icon--youtube"></a>
-          </div>
-          <div class="footer__info">
-            <p class="footer__company">ルミナプロダクション</p>
-            <p class="footer__detail">東京都渋谷区渋谷3丁目12-8
-</p>
-            <p class="footer__detail">渋谷フロンティアビル 5F</p>
-            <p class="footer__detail">TEL 03-6400-1234 FAX 03-6400-1235</p>
+          <nav class="footer__sitemap" aria-label="フッターナビゲーション">
+            <a href="index.html" class="footer__sitemap-link">ホーム</a>
+            <a href="index.html#about" class="footer__sitemap-link">私たちについて</a>
+            <a href="staff.html" class="footer__sitemap-link">スタッフ紹介</a>
+            <a href="list.html" class="footer__sitemap-link">スタッフ一覧</a>
+            <a href="index.html#business" class="footer__sitemap-link">事業内容</a>
+            <a href="index.html#news" class="footer__sitemap-link">お知らせ</a>
+            <a href="index.html#audition" class="footer__sitemap-link">オーディション</a>
+            <a href="index.html#faq" class="footer__sitemap-link">よくあるご質問</a>
+            <a href="index.html#contact" class="footer__sitemap-link">お問い合わせ</a>
+          </nav>
+
+          <div class="footer__aside">
+            <div class="footer__links">
+              <a href="#" class="footer__link">
+                <img
+                  src="assets/images/logo-instagram.webp"
+                  alt=""
+                  class="footer__icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />Instagram
+              </a>
+              <a href="#" class="footer__link">
+                <img
+                  src="assets/images/logo-x.webp"
+                  alt=""
+                  class="footer__icon"
+                  width="48"
+                  height="49"
+                  loading="lazy"
+                />X
+              </a>
+              <a href="#" class="footer__link">
+                <img
+                  src="assets/images/logo-facebook.webp"
+                  alt=""
+                  class="footer__icon"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />Facebook
+              </a>
+              <a href="#" class="footer__link" aria-label="YouTube">
+                <img
+                  src="assets/images/logo-youtube.webp"
+                  alt=""
+                  class="footer__icon--youtube"
+                  width="160"
+                  height="36"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+
+            <div class="footer__info">
+              <p class="footer__company">ルミナプロダクション</p>
+              <p class="footer__detail">
+                〒150-0002 東京都渋谷区渋谷3丁目12-8<br />渋谷フロンティアビル 5F
+              </p>
+              <p class="footer__detail">TEL 03-6400-1234 ／ FAX 03-6400-1235</p>
+            </div>
           </div>
         </div>
-        <div class="footer__copyright">
-          <p>Copyright lumina Production All rights reserved.</p>
-        </div>
+
+        <p class="footer__copyright">
+          &copy; 2026 LUMINA Production All rights reserved.
+        </p>
       </div>
     </footer>
+
+    <a href="#main" class="to-top" data-to-top aria-label="ページ上部へ戻る">
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </a>
   </body>
 </html>

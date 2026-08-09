@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+// =========================
+//  Design tokens
+// =========================
+
+// ---- Color ----
+$color-navy: #1f3a5f; // ブランドカラー
+$color-navy-dark: #142743;
+$color-navy-deep: #0c1a2e;
+$color-gold: #c6a664; // ロゴのアクセントカラー
+$color-gold-light: #e0c98f;
+$color-gold-dark: #9c7f42;
+
+$color-text: #333;
+$color-text-muted: #6b7280;
+$color-white: #fff;
+$color-bg-subtle: #f5f5f5;
+$color-bg-tint: #f1f1f1;
+$color-border: #d6d5d5;
+$color-border-dashed: #727272;
+$color-link: #1558d6;
+$color-error: #c0392b;
+$color-success: #1e7a4f;
+
+// ---- Layout ----
+$content-width: 1020px;
+$content-width-wide: 1240px;
+$gutter: 30px;
+$gutter-sp: 20px;
+
+// ---- Breakpoints ----
+// 900px を主ブレイクポイントとする（縦持ち／横持ちで表示を切り替えるため）
+$breakpoints: (
+  "sm": 600px,
+  "md": 768px,
+  "lg": 900px,
+  "xl": 1200px,
+);
+
+// ---- Typography ----
+$font-base: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP",
+  "Meiryo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-en: "Helvetica Neue", Arial, system-ui, sans-serif;
+
+// ---- Motion ----
+$ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+$duration-fast: 0.2s;
+$duration-base: 0.4s;
+$duration-slow: 0.8s;
+
+// ---- Elevation ----
+$shadow-sm: 0 2px 8px rgba(20, 39, 67, 0.08);
+$shadow-md: 0 8px 24px rgba(20, 39, 67, 0.12);
+$shadow-lg: 0 16px 40px rgba(20, 39, 67, 0.16);
+
+// ---- z-index ----
+$z-index: (
+  "base": 1,
+  "sticky": 50,
+  "overlay": 100,
+  "header": 120,
+  "drawer": 140,
+  "skip-link": 200,
+);

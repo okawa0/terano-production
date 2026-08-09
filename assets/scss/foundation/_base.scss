@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  Base
+// =========================
+
+a {
+  transition: opacity f.$duration-fast f.$ease-out,
+    color f.$duration-fast f.$ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.65;
+    }
+  }
+
+  @include f.focus-ring;
+}
+
+button {
+  @include f.focus-ring;
+}
+
+:where(input, textarea, select) {
+  @include f.focus-ring(f.$color-navy, 2px);
+}
+
+// キーボードユーザー向けのスキップリンク
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% -150%;
+  padding: 0.75rem 1.5rem;
+  background-color: f.$color-navy;
+  color: f.$color-white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 0 0 8px 8px;
+  transition: translate f.$duration-fast f.$ease-out;
+  @include f.z("skip-link");
+
+  &:focus-visible {
+    translate: -50% 0;
+  }
+}
+
+.visually-hidden {
+  @include f.visually-hidden;
+}
+
+// スクロール量に応じて要素を出現させる（JS で .is-visible を付与）
+// JS が使えない環境で本文が消えないよう、初期状態を隠すのは
+// html.js が付いているとき（＝ JS が動くとき）だけに限定する
+.js [data-reveal] {
+  @include f.motion-safe {
+    opacity: 0;
+    translate: 0 24px;
+    transition: opacity f.$duration-slow f.$ease-out,
+      translate f.$duration-slow f.$ease-out;
+    transition-delay: var(--reveal-delay, 0s);
+
+    &.is-visible {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+}

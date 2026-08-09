@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  Talent slider
+//  スクロールスナップで組み、JS はボタン操作の付加だけを担当する
+//  （JS が無効でも横スクロールで全件閲覧できる）
+// =========================
+
+.slider {
+  position: relative;
+}
+
+.slider__viewport {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 74%;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: f.$gutter;
+  padding-block: 0.5rem 1.5rem;
+  // 画面端まで見切れさせて「続きがある」ことを伝える
+  margin-inline: calc(f.$gutter * -1);
+  padding-inline: f.$gutter;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include f.mq(sm) {
+    grid-auto-columns: 42%;
+  }
+
+  @include f.mq(lg) {
+    grid-auto-columns: calc((100% - 3rem) / 4);
+    gap: 1.5rem;
+    margin-inline: 0;
+    padding-inline: 0;
+    scroll-padding-inline: 0;
+  }
+}
+
+.slider__slide {
+  scroll-snap-align: start;
+}
+
+.slider__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.slider__btn {
+  display: grid;
+  place-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid f.$color-navy;
+  border-radius: 50%;
+  background-color: f.$color-white;
+  transition: background-color f.$duration-fast f.$ease-out,
+    opacity f.$duration-fast f.$ease-out;
+
+  img {
+    width: 14px;
+    height: auto;
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  @media (hover: hover) {
+    &:not([disabled]):hover {
+      background-color: f.$color-bg-subtle;
+    }
+  }
+}
+
+// ---- タレントカード ----
+.talent-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: f.$color-white;
+  box-shadow: f.$shadow-sm;
+  transition: box-shadow f.$duration-base f.$ease-out,
+    translate f.$duration-base f.$ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 1;
+      translate: 0 -4px;
+      box-shadow: f.$shadow-md;
+
+      .talent-card__image {
+        scale: 1.06;
+      }
+    }
+  }
+}
+
+.talent-card__figure {
+  overflow: hidden;
+  background-color: f.$color-bg-tint;
+}
+
+.talent-card__image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  transition: scale f.$duration-slow f.$ease-out;
+}
+
+.talent-card__body {
+  padding: 1rem 1rem 1.25rem;
+}
+
+.talent-card__role {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: f.$color-gold-dark;
+}
+
+.talent-card__name {
+  margin-top: 0.35rem;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.talent-card__name-en {
+  margin-top: 0.2rem;
+  font-family: f.$font-en;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: f.$color-text-muted;
+}

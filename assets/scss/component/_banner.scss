@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  Banner
+// =========================
+
+.banners {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 4rem;
+
+  @include f.mq(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include f.mq(lg) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 6rem;
+  }
+}
+
+.banner {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: f.$shadow-sm;
+  transition: box-shadow f.$duration-base f.$ease-out;
+
+  img {
+    width: 100%;
+    aspect-ratio: 3168 / 1344;
+    object-fit: cover;
+    transition: scale f.$duration-slow f.$ease-out;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 1;
+      box-shadow: f.$shadow-md;
+
+      img {
+        scale: 1.04;
+      }
+    }
+  }
+}

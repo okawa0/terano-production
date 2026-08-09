@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  Reset
+// =========================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  // ヘッダー分のオフセットを付けてアンカー遷移する
+  scroll-padding-top: 72px;
+
+  @include f.motion-safe {
+    scroll-behavior: smooth;
+  }
+
+  @include f.mq(lg) {
+    scroll-padding-top: 104px;
+  }
+}
+
+body {
+  min-height: 100svh;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-family: f.$font-base;
+  color: f.$color-text;
+  background-color: f.$color-white;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+// アニメーションを減らす設定のユーザーには一律で動きを止める
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

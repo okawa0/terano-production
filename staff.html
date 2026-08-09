@@ -3,28 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>スタッフ一覧｜ルミナプロダクション</title>
+    <title>スタッフ紹介｜ルミナプロダクション</title>
     <meta
       name="description"
-      content="ルミナプロダクションに所属するタレント・声優・アーティスト・キャスターの一覧ページです。"
+      content="ルミナプロダクション所属のタレント・声優・アーティスト・キャスターのインタビューをご紹介します。現場での考え方や、これまでの歩みをご覧ください。"
     />
     <link
       rel="canonical"
-      href="https://okawa0.github.io/lumina-production/list.html"
+      href="https://okawa0.github.io/lumina-production/staff.html"
     />
 
     <!-- OGP -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ルミナプロダクション" />
     <meta property="og:locale" content="ja_JP" />
-    <meta property="og:title" content="スタッフ一覧｜ルミナプロダクション" />
+    <meta property="og:title" content="スタッフ紹介｜ルミナプロダクション" />
     <meta
       property="og:description"
-      content="ルミナプロダクションに所属するタレント・声優・アーティスト・キャスターの一覧ページです。"
+      content="ルミナプロダクション所属のタレント・声優・アーティスト・キャスターのインタビューをご紹介します。"
     />
     <meta
       property="og:url"
-      content="https://okawa0.github.io/lumina-production/list.html"
+      content="https://okawa0.github.io/lumina-production/staff.html"
     />
     <meta
       property="og:image"
@@ -48,9 +48,18 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://okawa0.github.io/lumina-production/" },
-          { "@type": "ListItem", "position": 2, "name": "スタッフ紹介", "item": "https://okawa0.github.io/lumina-production/staff.html" },
-          { "@type": "ListItem", "position": 3, "name": "スタッフ一覧", "item": "https://okawa0.github.io/lumina-production/list.html" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://okawa0.github.io/lumina-production/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "スタッフ紹介",
+            "item": "https://okawa0.github.io/lumina-production/staff.html"
+          }
         ]
       }
     </script>
@@ -87,7 +96,7 @@
               >
             </li>
             <li>
-              <a class="nav__link is-current-section" href="staff.html"
+              <a class="nav__link" href="staff.html" aria-current="page"
                 >TALENT<span class="nav__link-sub">所属タレント</span></a
               >
             </li>
@@ -127,18 +136,35 @@
       <div class="container">
         <ol class="breadcrumb__list">
           <li><a href="index.html" class="breadcrumb__link">ホーム</a></li>
-          <li><a href="staff.html" class="breadcrumb__link">スタッフ紹介</a></li>
-          <li><span class="breadcrumb__current" aria-current="page">スタッフ一覧</span></li>
+          <li><span class="breadcrumb__current" aria-current="page">スタッフ紹介</span></li>
         </ol>
       </div>
     </nav>
 
     <main id="main">
+      <!-- ページ上部のキービジュアル。SP と PC で画像を出し分ける -->
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="assets/images/hero.webp"
+          width="1920"
+          height="700"
+        />
+        <img
+          src="assets/images/hero--sp.webp"
+          alt="撮影スタジオ・レコーディングブース・中継現場で働くスタッフ"
+          class="page-hero__image"
+          width="828"
+          height="580"
+          fetchpriority="high"
+        />
+      </picture>
+
       <div class="container content">
         <div class="content__head">
-          <h1 class="content__title">スタッフ一覧</h1>
+          <h1 class="content__title">スタッフ紹介</h1>
           <p class="content__text">
-            ルミナプロダクションに所属するタレント・声優・アーティスト・キャスターの一覧です。
+            それぞれのフィールドで活躍する所属タレントに、日々の仕事への向き合い方を聞きました。
           </p>
         </div>
 
@@ -229,9 +255,7 @@
             />
             <div class="staff-card__content">
               <h2 class="card__title">
-                <a href="detail.html" class="card__title-link"
-                  >神崎 優（声優）</a
-                >
+                <a href="detail.html" class="card__title-link">神崎 優（声優）</a>
               </h2>
               <time datetime="2024-03-01" class="card__time">2024年3月1日（金）</time>
               <p class="card__text">
@@ -319,9 +343,7 @@
             />
             <div class="staff-card__content">
               <h2 class="card__title">
-                <a href="detail.html" class="card__title-link"
-                  >西園寺 凛（声優）</a
-                >
+                <a href="detail.html" class="card__title-link">西園寺 凛（声優）</a>
               </h2>
               <time datetime="2022-03-01" class="card__time">2022年3月1日（火）</time>
               <p class="card__text">
@@ -336,111 +358,20 @@
               /></span>
             </div>
           </article>
-
-          <article class="staff-card" data-reveal>
-            <img
-              src="assets/images/staff-7.webp"
-              alt="橘 ひかり"
-              class="staff-card__image"
-              width="341"
-              height="341"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="staff-card__content">
-              <h2 class="card__title">
-                <a href="detail.html" class="card__title-link"
-                  >橘 ひかり（キャスター）</a
-                >
-              </h2>
-              <time datetime="2022-03-01" class="card__time">2022年3月1日（火）</time>
-              <p class="card__text">
-                情報番組を担当するようになってから、日常の何気ない出来事にもアンテナを張るようになり、視聴者の目線で「今本当に知りたいことは何か」を考え続ける癖がついたように感じていますし...
-              </p>
-              <span class="card__link"
-                >続きを読む<img
-                  src="assets/images/arrow.svg"
-                  alt=""
-                  width="26"
-                  height="6"
-              /></span>
-            </div>
-          </article>
-
-          <article class="staff-card" data-reveal>
-            <img
-              src="assets/images/staff-8.webp"
-              alt="相馬 悠斗"
-              class="staff-card__image"
-              width="341"
-              height="341"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="staff-card__content">
-              <h2 class="card__title">
-                <a href="detail.html" class="card__title-link"
-                  >相馬 悠斗（アーティスト）</a
-                >
-              </h2>
-              <time datetime="2022-03-01" class="card__time">2022年3月1日（火）</time>
-              <p class="card__text">
-                ライブで観客の反応を直接感じられる瞬間が一番好きで、ステージ上から見える景色は毎回違い、その空気感に合わせて自分の表現も自然と変化していくのが音楽の面白さだと思っていますが...
-              </p>
-              <span class="card__link"
-                >続きを読む<img
-                  src="assets/images/arrow.svg"
-                  alt=""
-                  width="26"
-                  height="6"
-              /></span>
-            </div>
-          </article>
-
-          <article class="staff-card" data-reveal>
-            <img
-              src="assets/images/staff-9.webp"
-              alt="久我山 結衣"
-              class="staff-card__image"
-              width="341"
-              height="341"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="staff-card__content">
-              <h2 class="card__title">
-                <a href="detail.html" class="card__title-link"
-                  >久我山 結衣（タレント）</a
-                >
-              </h2>
-              <time datetime="2022-03-01" class="card__time">2022年3月1日（火）</time>
-              <p class="card__text">
-                タレントとして活動する中で、求められる役割は現場ごとに違いますが、その都度全力で応えることが信頼につながると信じていて、どんな小さな仕事でも手を抜かない姿勢を大切にしていますが...
-              </p>
-              <span class="card__link"
-                >続きを読む<img
-                  src="assets/images/arrow.svg"
-                  alt=""
-                  width="26"
-                  height="6"
-              /></span>
-            </div>
-          </article>
         </div>
 
-        <nav class="pagination" aria-label="ページ送り">
-          <span
-            class="pagination__link pagination__link--disabled"
-            aria-disabled="true"
-            >前のページはありません</span
-          >
-          <p class="pagination__status">1 / 1 ページ</p>
-          <span
-            class="pagination__link pagination__link--disabled"
-            aria-disabled="true"
-            >次のページはありません</span
-          >
-        </nav>
+        <div class="btn-wrapper">
+          <a href="list.html" class="btn btn--navy">
+            スタッフ一覧を見る
+            <img
+              src="assets/images/arrow--white.svg"
+              alt=""
+              class="btn__arrow"
+              width="26"
+              height="6"
+            />
+          </a>
+        </div>
 
         <div class="banners">
           <a href="#" class="banner">

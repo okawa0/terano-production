@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  Accordion (FAQ)
+// =========================
+
+.accordion {
+  display: grid;
+  gap: 1rem;
+}
+
+.accordion__item {
+  border: 1px solid f.$color-border;
+  border-radius: 10px;
+  background-color: f.$color-white;
+  overflow: hidden;
+}
+
+.accordion__trigger {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.25rem 1.25rem;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  transition: background-color f.$duration-fast f.$ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: f.$color-bg-subtle;
+    }
+  }
+}
+
+.accordion__mark {
+  flex-shrink: 0;
+  font-family: f.$font-en;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: f.$color-gold;
+}
+
+.accordion__label {
+  flex: 1;
+}
+
+.accordion__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 0.2rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 50% 0 auto;
+    height: 2px;
+    background-color: f.$color-navy;
+    translate: 0 -50%;
+    transition: rotate f.$duration-base f.$ease-out;
+  }
+
+  &::after {
+    rotate: 90deg;
+  }
+}
+
+.accordion__trigger[aria-expanded="true"] .accordion__icon::after {
+  rotate: 0deg;
+}
+
+// grid-template-rows 0fr → 1fr で高さを固定値なしにアニメーションさせる
+.accordion__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows f.$duration-base f.$ease-out;
+}
+
+.accordion__panel.is-open {
+  grid-template-rows: 1fr;
+}
+
+.accordion__panel-inner {
+  overflow: hidden;
+}
+
+.accordion__body {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1.25rem 1.5rem;
+  font-size: 14px;
+  line-height: 1.9;
+  color: f.$color-text-muted;
+}

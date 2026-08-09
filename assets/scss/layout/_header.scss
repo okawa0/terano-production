@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  Header
+// =========================
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: f.$color-white;
+  transition: box-shadow f.$duration-base f.$ease-out;
+  @include f.z("header");
+
+  // backdrop-filter / transform の類をここに足さないこと。
+  // これらは position: fixed の子要素（ドロワー）の包含ブロックを
+  // ヘッダー自身に変えてしまい、ドロワーが画面全体に広がらなくなる。
+
+  // 少しスクロールしたら影を出して浮かせる（JS で付与）
+  &.is-scrolled {
+    box-shadow: f.$shadow-sm;
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 64px;
+
+  @include f.mq(lg) {
+    min-height: 96px;
+  }
+}
+
+.header__brand {
+  flex-shrink: 0;
+
+  // ロゴの高さがヘッダーからはみ出さない幅を指定する（縦横比 814:344）
+  img {
+    width: 140px;
+
+    @include f.mq(lg) {
+      width: 200px;
+    }
+  }
+}
+
+// ---- Global navigation ----
+.nav {
+  // SP はドロワー。PC は通常表示。
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(82%, 340px);
+  padding: 96px 2rem 3rem;
+  background-color: f.$color-navy;
+  color: f.$color-white;
+  overflow-y: auto;
+  translate: 100% 0;
+  visibility: hidden;
+  transition: translate f.$duration-base f.$ease-out,
+    visibility f.$duration-base f.$ease-out;
+  @include f.z("drawer");
+
+  &.is-open {
+    translate: 0 0;
+    visibility: visible;
+  }
+
+  @include f.mq(lg) {
+    position: static;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+    color: inherit;
+    overflow: visible;
+    translate: none;
+    visibility: visible;
+    transition: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  @include f.mq(lg) {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.75rem;
+  }
+}
+
+.nav__link {
+  display: block;
+  padding-block: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  font-family: f.$font-en;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  @include f.mq(lg) {
+    position: relative;
+    padding-block: 0.25rem;
+    border-bottom: 0;
+    font-size: 13px;
+    text-align: center;
+
+    // ホバー・現在地で下線を伸ばす
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: f.$color-gold;
+      scale: 0 1;
+      transform-origin: left center;
+      transition: scale f.$duration-base f.$ease-out;
+    }
+
+    // 現在地のページ、および下層ページから見た親セクション
+    &[aria-current="page"]::after,
+    &.is-current-section::after {
+      scale: 1 1;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 1;
+
+        &::after {
+          scale: 1 1;
+        }
+      }
+    }
+  }
+}
+
+.nav__link-sub {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: f.$font-base;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+.nav__item--cta {
+  margin-top: 1.5rem;
+
+  @include f.mq(lg) {
+    margin-top: 0;
+  }
+}
+
+.nav__cta {
+  display: block;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  background-color: f.$color-gold;
+  color: f.$color-navy-dark;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color f.$duration-fast f.$ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 1;
+      background-color: f.$color-gold-light;
+    }
+  }
+}
+
+// ---- Hamburger ----
+.drawer-toggle {
+  display: grid;
+  place-content: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  margin-right: -8px;
+  @include f.z("drawer");
+
+  @include f.mq(lg) {
+    display: none;
+  }
+}
+
+.drawer-toggle__bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: f.$color-navy;
+  transition: translate f.$duration-base f.$ease-out,
+    rotate f.$duration-base f.$ease-out,
+    opacity f.$duration-fast f.$ease-out,
+    background-color f.$duration-base f.$ease-out;
+}
+
+.drawer-toggle[aria-expanded="true"] {
+  .drawer-toggle__bar {
+    background-color: f.$color-white;
+
+    &:nth-child(1) {
+      translate: 0 8px;
+      rotate: 45deg;
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      translate: 0 -8px;
+      rotate: -45deg;
+    }
+  }
+}
+
+// ---- Overlay ----
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(12, 26, 46, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity f.$duration-base f.$ease-out,
+    visibility f.$duration-base f.$ease-out;
+  @include f.z("overlay");
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include f.mq(lg) {
+    display: none;
+  }
+}

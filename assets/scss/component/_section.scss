@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  Section
+// =========================
+
+.section {
+  padding-block: 4rem;
+
+  @include f.mq(lg) {
+    padding-block: 7rem;
+  }
+}
+
+.section--tint {
+  background-color: f.$color-bg-subtle;
+}
+
+.section--navy {
+  background-color: f.$color-navy;
+  color: f.$color-white;
+}
+
+// ---- 見出し ----
+.section__head {
+  margin-bottom: 2.5rem;
+
+  @include f.mq(lg) {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.section__head--center {
+  text-align: center;
+}
+
+.section__label {
+  display: block;
+  font-family: f.$font-en;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: f.$color-gold;
+
+  @include f.mq(lg) {
+    font-size: 13px;
+  }
+}
+
+.section__title {
+  margin-top: 0.5rem;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+
+  @include f.mq(lg) {
+    font-size: 34px;
+  }
+}
+
+.section__lead {
+  margin-top: 1rem;
+  font-size: 14px;
+  line-height: 2;
+  color: f.$color-text-muted;
+
+  .section--navy & {
+    color: rgba(255, 255, 255, 0.78);
+  }
+}
+
+.section__foot {
+  margin-top: 2.5rem;
+  text-align: center;
+
+  @include f.mq(lg) {
+    margin-top: 3.5rem;
+  }
+}

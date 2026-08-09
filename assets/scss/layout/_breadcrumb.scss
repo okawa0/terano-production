@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  Breadcrumb
+// =========================
+
+.breadcrumb {
+  padding-block: 0.9rem;
+  background-color: f.$color-bg-subtle;
+  font-size: 11px;
+}
+
+.breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  li:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-inline: 8px 10px;
+    border-top: 1px solid f.$color-text-muted;
+    border-right: 1px solid f.$color-text-muted;
+    rotate: 45deg;
+    translate: 0 -1px;
+  }
+}
+
+.breadcrumb__link {
+  color: f.$color-link;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.breadcrumb__current {
+  color: f.$color-text-muted;
+}

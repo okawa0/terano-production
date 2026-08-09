@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+@use "../foundation" as f;
+
+// =========================
+//  Container
+// =========================
+
+.container {
+  padding-inline: f.$gutter;
+
+  @include f.mq(lg) {
+    max-width: f.$content-width;
+    margin-inline: auto;
+  }
+}
+
+// 下層ページ共通の本文エリア
+.content {
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
+
+  @include f.mq(lg) {
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+  }
+}
+
+.content__head {
+  margin-bottom: 2.5rem;
+
+  @include f.mq(lg) {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.content__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  @include f.mq(lg) {
+    font-size: 36px;
+  }
+}
+
+.content__text {
+  margin-top: 1rem;
+  font-size: 13px;
+  line-height: 2;
+  color: f.$color-text-muted;
+}
+
+.container--wide {
+  padding-inline: f.$gutter-sp;
+
+  @include f.mq(lg) {
+    max-width: f.$content-width-wide;
+    margin-inline: auto;
+    padding-inline: f.$gutter;
+  }
+}
